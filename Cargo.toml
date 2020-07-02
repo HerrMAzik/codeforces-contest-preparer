@@ -1,0 +1,11 @@
+[package]
+name = "cfrs"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+ureq = { version = "1.3", default-features = false, features = [ "tls", "json" ] }
+serde = { version = "1", default-features = false, features = [ "derive" ] }
+clap = { version = "3.0.0-beta.1", default-features = false, features = [ "std", "derive" ] }
+anyhow = "1"
+scraper = { version = "0.12", default-features = false }
