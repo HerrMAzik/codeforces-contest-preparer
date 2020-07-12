@@ -24,7 +24,7 @@ struct Problem {
     index: String,
     name: String,
     r#type: String,
-    points: f32,
+    points: Option<f32>,
     rating: Option<f32>,
 }
 
