@@ -9,3 +9,4 @@ serde = { version = "1", default-features = false, features = [ "derive" ] }
 clap = { version = "3.0.0-beta.1", default-features = false, features = [ "std", "derive" ] }
 anyhow = "1"
 scraper = { version = "0.12", default-features = false }
+tinytemplate = "1.1"
