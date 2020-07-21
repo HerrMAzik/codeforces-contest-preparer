@@ -56,14 +56,14 @@ struct TestContext<'a> {
     scanner: &'a str,
 }
 
-static CARGO_TOML: &'static str = r#"
+const CARGO_TOML: &'static str = r#"
 [package]
 name = "main"
 version = "0.1.0"
 edition = "2018"
 "#;
 
-static SOLVE: &'static str = r#"
+const SOLVE: &'static str = r#"
 fn solve(sc: &mut scanner::Scanner, out: &mut impl Write) {
     let t = sc.next();
     for _ in 0..t {
@@ -73,7 +73,7 @@ fn solve(sc: &mut scanner::Scanner, out: &mut impl Write) {
 }
 "#;
 
-static MAIN: &'static str = r#"
+const MAIN: &'static str = r#"
 fn main() {
     let in_string = scanner::read_string();
     let mut scanner = scanner::Scanner::new(&in_string);
@@ -83,7 +83,7 @@ fn main() {
 }
 "#;
 
-static SCANNER: &'static str = r#"
+const SCANNER: &'static str = r#"
 #[allow(dead_code)]
 mod scanner {
     use std;
@@ -119,7 +119,7 @@ mod scanner {
 }
 "#;
 
-static TEMPLATE: &'static str = r##"
+const TEMPLATE: &'static str = r##"
 use std::io::*;
 {solve}
 #[cfg(test)]
